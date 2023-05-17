@@ -1,0 +1,34 @@
+{
+  "name": "vite-preact-typescript-esm",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/carousel.js"
+    },
+    "./secondary": {
+      "import": "./dist/example-lib.js"
+    }
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && node build.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "keen-slider": "6.8.5",
+    "preact": "10.11.3",
+    "vite-plugin-css-injected-by-js": "2.4.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.5.0",
+    "@types/node": "18.11.18",
+    "typescript": "4.9.3",
+    "vite": "4.0.0"
+  }
+}

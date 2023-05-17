@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.body {
+  position: relative;
+}
+
+.example-lib-container {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.example-lib-rectangle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #380848;
+  transform: scale(0);
+  border-radius: 50%;
+  color: white;
+  opacity: 0;
+  overflow: hidden;
+  animation: example-lib-scale-in .3s ease-out forwards,
+    example-lib-expand .35s .25s ease-out forwards;
+}
+
+.example-lib-notification-text {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  animation: example-lib-fade-in .65s ease-in forwards;
+}
+
+@keyframes example-lib-scale-in {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes example-lib-expand {
+  50% {
+    width: 400px;
+    border-radius: 6px;
+  }
+
+  100% {
+    width: 375px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .2),
+      0px 1px 1px 0px rgba(0, 0, 0, .14),
+      0px 3px 3px -1px rgba(0, 0, 0, .12);
+  }
+}
+
+@keyframes example-lib-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: .8;
+  }
+}

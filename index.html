@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Preact ES Module Demo</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+    <div id="app"></div>
+    <script type="module" src="./dev/src/main.tsx"></script>
+    <div id="lib"></div>
+    <script>
+    (() => {
+      import("./src/carousel/main.tsx").then((module) => {
+        const targetElement = document.querySelector('#lib');
+        const props = { message: 'This Notification displayed by ES Module.' };
+        module.carousel.render({id: 'demo-carousel', targetSelector: '#lib'});
+      });
+    })();
+    </script>
+</html>
