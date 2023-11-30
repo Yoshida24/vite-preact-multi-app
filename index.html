@@ -11,10 +11,10 @@
     <div id="lib"></div>
     <script>
     (() => {
-      import("./src/carousel/main.tsx").then((module) => {
+      import("./src/slider/main.tsx").then((module) => {
         const targetElement = document.querySelector('#lib');
         const props = { message: 'This Notification displayed by ES Module.' };
-        module.carousel.render({id: 'demo-carousel', targetSelector: '#lib'});
+        module.slider.render({id: 'demo-slider', targetSelector: '#lib'});
       });
     })();
     </script>

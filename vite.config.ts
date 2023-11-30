@@ -21,12 +21,8 @@ export default defineConfig(({ command, mode }) => {
       lib: {
         entry: {
           // 複数のエントリーポイントを指定してはならない。単一のJSを生成できなくなるため。なお、複数のエントリーポイントを指定するとpreactの共通ランタイムが切り出される。
-          carousel: resolve(__dirname, 'src/carousel/main.tsx'),
-          // 'example-lib': resolve(__dirname, 'src/example-lib/main.tsx'),
+          slider: resolve(__dirname, 'src/slider/main.tsx'),
         },
-        // entry: resolve(__dirname, 'src/carousel/main.tsx'),
-        // name: 'carousel',
-        // fileName: (format) => `carousel.${format}.js`,
         formats: ['es'], // Specifies the module format to be generated as an array. The default is ['es', 'umd'], so you do not need to specify this in this case.
       },
       cssCodeSplit: true,

@@ -9,8 +9,8 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 const modules = [
     {
-        name: 'carousel',
-        entry: resolve(__dirname, 'src/carousel/main.tsx')
+        name: 'slider',
+        entry: resolve(__dirname, 'src/slider/main.tsx')
     },
     {
         name: 'example-lib',
